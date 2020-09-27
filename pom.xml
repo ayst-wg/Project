@@ -21,6 +21,8 @@
         <module>Order-8003</module>
         <module>Order-8004-Zookeeper</module>
         <module>User-1002-Zookeeper</module>
+        <module>User-1003-Ribbon</module>
+        <module>User-1004-Feign</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
