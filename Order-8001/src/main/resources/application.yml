@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: order-service-8001
+    name: cloud-order-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -17,9 +17,12 @@ mybatis:
 
 eureka:
   instance:
-    hostname: OrderService8001
+    instance-id: order-8001
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://eurekaServer7001.com:7001/eureka/,http://eurekaServer7002.com:7002/eureka/

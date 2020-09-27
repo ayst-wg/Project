@@ -28,21 +28,21 @@ public class OrderController extends BaseContorller {
     private OrderService orderService;
 
     @Value("${server.port}")
-    private String serverPort;
+    private String port;
 
     @GetMapping("/order/getOrderInfoById/{id}")
     public CommonResult<Order> getOrderInfoById(@PathVariable("id") long id){
-        log.info("###### id = " + id);
+        log.info("port = " + port);
         if("".equals(id)){
-            return new CommonResult<Order>(StatusCode.REQUEST_PARAM_ERROR);
+            return new CommonResult(StatusCode.REQUEST_PARAM_ERROR);
         }
         Order order = this.orderService.getOrderInfoById(id);
         if(order != null){
-            log.info("######### 查询成功：" + order);
-            return new CommonResult<>(order,StatusCode.SUCCESS);
+            log.info("查询成功：" + order);
+            return new CommonResult(order,StatusCode.SUCCESS,"，端口号：" + port);
         }else{
-            log.info("######## 查询失败！");
-            return new CommonResult<>(order,StatusCode.FAIL);
+            log.info(StatusCode.FAIL.getMessage());
+            return new CommonResult(StatusCode.FAIL);
         }
     }
 

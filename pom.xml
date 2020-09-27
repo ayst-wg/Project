@@ -15,6 +15,12 @@
         <module>Eureka-Server-7001</module>
         <module>commons</module>
         <module>Order-8001</module>
+        <module>Eureka-Server-7002</module>
+        <module>Order-8002</module>
+        <module>User-1001</module>
+        <module>Order-8003</module>
+        <module>Order-8004-Zookeeper</module>
+        <module>User-1002-Zookeeper</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

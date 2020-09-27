@@ -22,4 +22,5 @@ public class Order implements Serializable {
 
     private String orderId;
 
+    private long uid;
 }
