@@ -1,0 +1,19 @@
+server:
+  port: 1004
+
+spring:
+  application:
+    name: cloud-user-service
+
+#这里把feign做客户端
+eureka:
+  instance:
+    instance-id: user-1004
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eurekaServer7001.com:7001/eureka/,http://eurekaServer7002.com:7002/eureka/
