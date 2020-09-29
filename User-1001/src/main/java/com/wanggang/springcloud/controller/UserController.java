@@ -46,7 +46,7 @@ public class UserController extends BaseContorller {
 
     @GetMapping(value = "/user/getUserById/{id}")
     public CommonResult<User> getUserById(@PathVariable("id") long id) {
-        log.info("### port = " + this.port);
+        log.info("port = " + this.port);
         if ("".equals(id)) {
             return new CommonResult<User>(StatusCode.REQUEST_PARAM_ERROR);
         }

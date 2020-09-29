@@ -14,6 +14,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
  * @Version 1.0
  **/
 @SpringBootApplication
+@EnableEurekaClient
 @RibbonClient(name = "CLOUD-ORDER-SERVICE", configuration = RibbonRule.class)
 public class User1003Application {
     public static void main(String[] args) {

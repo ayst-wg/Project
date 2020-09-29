@@ -2,7 +2,6 @@ package com.wanggang.springcloud.controller;
 
 import com.wanggang.springcloud.contorller.BaseContorller;
 import com.wanggang.springcloud.entity.Order;
-import com.wanggang.springcloud.entity.User;
 import com.wanggang.springcloud.result.CommonResult;
 import com.wanggang.springcloud.service.UserFeignService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +28,6 @@ public class UserController extends BaseContorller {
 
     @Value("${server.port}")
     private String port;
-
 
     @GetMapping(value = "/user/feign/getOrderInfoById/{id}")
     public CommonResult<Order> getUserById(@PathVariable("id") long id){
