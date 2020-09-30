@@ -1,0 +1,25 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          # uri: git@github.com:ayst-wg/cloud-config-center.git  # github 上的远程仓库地址名称
+          uri: https://github.com/ayst-wg/cloud-config-center.git  # github 上的远程仓库地址名称
+          search-paths:
+            - cloud-config-center  # 搜索github远程仓库的配置文件目录
+      label: master  # 选择分支，设置值访问时可以省略/master/路径，如：http://localhost:3344/global-config-prod.yml
+
+eureka:
+  instance:
+    instance-id: config-3344
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eurekaServer7001.com:7001/eureka/,http://eurekaServer7002.com:7002/eureka/

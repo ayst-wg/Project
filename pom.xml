@@ -27,6 +27,8 @@
         <module>User-1005-Hystrix</module>
         <module>Hystrix-Dashboard-9001</module>
         <module>Gateway-9527</module>
+        <module>Config-Server-3344</module>
+        <module>Config-Client-3355</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
