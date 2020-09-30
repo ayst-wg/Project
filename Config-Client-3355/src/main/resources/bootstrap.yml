@@ -11,6 +11,11 @@ spring:
       name: global-config
       profile: dev
       uri: http://localhost:3344
+  rabbitmq:
+    host: 192.168.0.106
+    port: 5672
+    username: wanggang
+    password: wanggang
 
 eureka:
   instance:
@@ -21,3 +26,10 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://eurekaServer7001.com:7001/eureka/,http://eurekaServer7002.com:7002/eureka/
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

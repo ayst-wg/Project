@@ -12,12 +12,18 @@
     <artifactId>Config-Client-3355</artifactId>
 
     <dependencies>
-    <!-- 引用自己定义的api通用包 -->
-    <dependency>
-        <groupId>com.wanggang.springcloud</groupId>
-        <artifactId>commons</artifactId>
-        <version>${project.version}</version>
-    </dependency>
+        <!-- 引用自己定义的api通用包 -->
+        <dependency>
+            <groupId>com.wanggang.springcloud</groupId>
+            <artifactId>commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- bus rabbitMQ -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
 
         <!-- configClient -->
         <dependency>

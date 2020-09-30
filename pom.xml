@@ -29,6 +29,7 @@
         <module>Gateway-9527</module>
         <module>Config-Server-3344</module>
         <module>Config-Client-3355</module>
+        <module>Config-Client-3366</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

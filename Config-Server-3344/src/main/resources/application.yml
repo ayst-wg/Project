@@ -13,6 +13,11 @@ spring:
           search-paths:
             - cloud-config-center  # 搜索github远程仓库的配置文件目录
       label: master  # 选择分支，设置值访问时可以省略/master/路径，如：http://localhost:3344/global-config-prod.yml
+  rabbitmq:
+    host: 192.168.0.106
+    port: 5672
+    username: wanggang
+    password: wanggang
 
 eureka:
   instance:
@@ -23,3 +28,10 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://eurekaServer7001.com:7001/eureka/,http://eurekaServer7002.com:7002/eureka/
+
+# RabbitMQ 相关配置，暴露bus消息总线刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
