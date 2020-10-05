@@ -30,6 +30,9 @@
         <module>Config-Server-3344</module>
         <module>Config-Client-3355</module>
         <module>Config-Client-3366</module>
+        <module>Stream-Provider-4001</module>
+        <module>Stream-Consumer-4002</module>
+        <module>Stream-Consumer-4003</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
