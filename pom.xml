@@ -75,15 +75,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Spring cloud alibaba -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -112,6 +103,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- springboot maven插件 -->
     <build>
         <plugins>
             <plugin>
@@ -126,7 +118,7 @@
         </plugins>
     </build>
 
-    <!--第三方maven私服-->
+    <!--第三方 maven 私服-->
     <repositories>
         <repository>
             <id>nexus-aliyun</id>
