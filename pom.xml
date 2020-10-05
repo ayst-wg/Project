@@ -33,6 +33,8 @@
         <module>Stream-Provider-4001</module>
         <module>Stream-Consumer-4002</module>
         <module>Stream-Consumer-4003</module>
+        <module>Order-8006-Zipkin</module>
+        <module>User-1006-Zipkin</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
